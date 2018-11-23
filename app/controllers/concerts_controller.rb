@@ -5,6 +5,6 @@ class ConcertsController < ApplicationController
   end
 
   def show
-
+    render json: Concert.find(params[:id])
   end
 end
