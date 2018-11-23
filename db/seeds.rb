@@ -12,18 +12,18 @@ concerts = [
 ]
 
 attendees = [
-  ["Skylar Huffman"],
-  ["Taylor Mohamed"],
-  ["Angelica Nicholson"],
-  ["Rylan Cisneros"],
-  ["Terence Haas"],
-  ["Rico Weber"],
-  ["Raymond Delarosa"],
-  ["Maddie Mcculloch"],
-  ["Lacey Browning"],
-  ["Caiden Baird"],
-  ["Paisley Brennan"],
-  ["Klara Wyatt"]
+  "Skylar Huffman",
+  "Taylor Mohamed",
+  "Angelica Nicholson",
+  "Rylan Cisneros",
+  "Terence Haas",
+  "Rico Weber",
+  "Raymond Delarosa",
+  "Maddie Mcculloch",
+  "Lacey Browning",
+  "Caiden Baird",
+  "Paisley Brennan",
+  "Klara Wyatt"
 ]
 
 puts "Generating Concerts..."
