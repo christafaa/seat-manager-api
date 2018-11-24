@@ -7,4 +7,8 @@ class ConcertsController < ApplicationController
   def show
     render json: Concert.find(params[:id])
   end
+
+  def update
+    binding.pry
+  end
 end
