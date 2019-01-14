@@ -1,24 +1,78 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails RESTful API that supports [Seat Manager](https://github.com/christafaa/react-seat-app)
 
-Things you may want to cover:
+GET /concerts<br />
 
-* Ruby version
+[Example](https://guarded-retreat-91644.herokuapp.com/concerts/)<br />
 
-* System dependencies
+Response body:
 
-* Configuration
+```
+[
+  {
+    id: 1,
+    title: "Russian Inspiration",
+    date: "2018-10-16",
+    location: "Alice Tully Hall"
+  },
+  {
+    id: 2,
+    title: "Quartet Variations",
+    date: "2018-10-21",
+    location: "Alice Tully Hall"
+  }
+]
+```
 
-* Database creation
+GET /concerts/:id/attendees<br />
 
-* Database initialization
+[Example](https://guarded-retreat-91644.herokuapp.com/concerts/1/attendees)<br />
 
-* How to run the test suite
+Response body:
+```
+{
+  id: 1,
+  title: "Russian Inspiration",
+  date: "2018-10-16",
+  location: "Alice Tully Hall",
+  attendees: [
+    {
+      id: 7,
+      name: "Raymond Delarosa"
+    },
+    {
+      id: 3,
+      name: "Angelica Nicholson"
+    }
+  ]
+}
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+GET /concerts/:id/seats<br />
 
-* Deployment instructions
+[Example](https://guarded-retreat-91644.herokuapp.com/concerts/1/seats)<br />
 
-* ...
+Response body:
+```
+{
+  id: 1,
+  title: "Russian Inspiration",
+  date: "2018-10-16",
+  location: "Alice Tully Hall",
+  seats: [
+    {
+      id: 1,
+      number: "101",
+      concert_id: 1,
+      attendee_id: null
+    },
+    {
+      id: 2,
+      number: "104",
+      concert_id: 1,
+      attendee_id: 3
+    }
+  ]
+}
+```
